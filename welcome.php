@@ -92,7 +92,7 @@ span.psw {
     
     
  <nav class="navbar navbar-light navbar-expand-md">
-    <div class="container-fluid"><a href="#" class="navbar-brand">Technotsav</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-2"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+    <div class="container-fluid"><a href="#" class="navbar-brand">Technotsav</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-2"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span><span class="navbar-toggler-icon"></span><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse"
             id="navcol-2">
             <ul class="nav navbar-nav ml-auto">
@@ -137,23 +137,23 @@ span.psw {
                 <tbody>
                     <tr>
                         <td><input type="text" name='name1'/></td>
-                        <td><input type="text" name='roll1'/></td>
+                        <td><input type="text" required maxlength="10" name='roll1'/></td>
                         <td><input type="text" name='no1'/></td>
                         <td></td>
                     </tr>
                     <tr>
                         <td><input type="text" name='name2'/></td>
-                        <td><input type="text" name='roll2'/></td>
+                        <td><input type="text" required maxlength="10" name='roll2'/></td>
                         <td><input type="text" name='no2'/></td>
                     </tr>
                     <tr>
                         <td><input type="text" name='name3'/></td>
-                        <td><input type="text" name='roll3' /></td>
+                        <td><input type="text" required maxlength="10" name='roll3' /></td>
                         <td><input type="text" name='no3'/></td>
                     </tr>
                       <tr>
                         <td><input type="text" name='name4'/></td>
-                        <td><input type="text" name='roll4' /></td>
+                        <td><input type="text" required maxlength="10" name='roll4' /></td>
                         <td><input type="text" name='no4'/></td>
                     </tr>
                 </tbody>

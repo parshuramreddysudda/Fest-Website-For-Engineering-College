@@ -18,7 +18,7 @@ if(isset($_GET['idNumber']))
 {
     $id=$_GET['idNumber'];
     
-$sql = "SELECT TeamName from Data WHERE Roll1=$id";
+$sql = "SELECT Roll1,Roll2,Roll3,Roll4,TeamName FROM Data";
     
     
 $result = $conn->query($sql);
@@ -28,109 +28,71 @@ if ($result->num_rows > 0)
     // output data of each row
     while($row = $result->fetch_assoc()) 
     {
-          echo "
+        
+        echo $id;
+        if(strcmp($row["Roll1"],$id)==0)
+        {
+              echo "
             <script type=\"text/javascript\">
            alert('Match Found ');
             </script>
         ";
-          $_SESSION['val']='yes';
+              
         $_SESSION['Name']=$row['TeamName'];
+             $_SESSION['val']='yes';
         break;
-    }
-} 
-else 
-    
-{
-    
-         $_SESSION['val']='no';
-     
-        
-}
-    $sql = "SELECT TeamName from Data WHERE Roll2=$id";
-    
-    
-$result = $conn->query($sql);
-   
-if ($result->num_rows > 0) 
-{
-    // output data of each row
-    while($row = $result->fetch_assoc()) 
-    {
-        
-          $_SESSION['val']='yes';
-        $_SESSION['Name']=$row['TeamName'];
-        break;
-    }
-} 
-else 
-    
-{
-        
-    
-         $_SESSION['val']='no';
-     
-        
-}
-    $sql = "SELECT TeamName from Data WHERE Roll3=$id";
-    
-    
-$result = $conn->query($sql);
-   
-if ($result->num_rows > 0) 
-{
-    // output data of each row
-    while($row = $result->fetch_assoc()) 
-    {
-          echo "
+        }
+           if(strcmp($row["Roll2"],$id)==0)
+        {
+              echo "
             <script type=\"text/javascript\">
            alert('Match Found ');
             </script>
         ";
-          $_SESSION['val']='yes';
+              
         $_SESSION['Name']=$row['TeamName'];
+             $_SESSION['val']='yes';
         break;
-    }
-} 
-else 
-    
-{
-        
-     
-         $_SESSION['val']='no';
-     
-        
-}
-    $sql = "SELECT TeamName from Data WHERE Roll4=$id";
-    
-    
-$result = $conn->query($sql);
-   
-if ($result->num_rows > 0) 
-{
-    // output data of each row
-    while($row = $result->fetch_assoc()) 
-    {
-           echo "
+        }
+        if(strcmp($row["Roll3"],$id)==0)
+        {
+              echo "
             <script type=\"text/javascript\">
            alert('Match Found ');
             </script>
         ";
-          $_SESSION['val']='yes';
+              
         $_SESSION['Name']=$row['TeamName'];
+             $_SESSION['val']='yes';
         break;
+        }
+           if(strcmp($row["Roll4"],$id)==0)
+        {
+              echo "
+            <script type=\"text/javascript\">
+           alert('Match Found ');
+            </script>
+        ";
+              
+        $_SESSION['Name']=$row['TeamName'];
+             $_SESSION['val']='yes';
+        break;
+        }
+        
+      
     }
 } 
 else 
     
 {
-        
     
          $_SESSION['val']='no';
      
         
 }
 
-    
+ 
+        
 }
 ?>
  
@@ -211,7 +173,7 @@ span.psw {
    
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body style="background-image: url(assets/img/shotinraww-267315-unsplash.jpg);position:cover;">
+<body style="background-image: url(hellassets/img/shotinraww-267315-unsplash.jpg);position:cover;">
  <nav class="navbar navbar-light navbar-expand-md">
     <div class="container-fluid"><a href="#" class="navbar-brand">Technotsav</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-2"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse"
