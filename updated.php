@@ -40,7 +40,7 @@ $type=$_GET['type'];
 $extra='Text';
 
 $sql = "INSERT INTO data (id, TeamName,Description,Date,Name1,Name2,Name3,Name4,Number1,Number2,Number3,Number4,Roll1,Roll2,Roll3,Roll4,Paid,Room,Allocated,Type,extra1,extra2,extra3)
-VALUES (' $id ',' $TName ',' $desc ',' $date ',' $name1 ',' $name2',' $name3 ',' $name4 ',' $no1 ',' $no2 ',' $no3 ',' $no4 ',' $roll1 ',' $roll2 ',' $roll3 ',' $roll4 ',' $paid ',' $room ',' $alloca ',' $type ',' $extra ',' $extra ',' $extra ')";
+VALUES (' $id ',' $TName ',' $desc ',' $date ',' $name1 ',' $name2',' $name3 ',' $name4 ',' $no1 ',' $no2 ',' $no3 ',' $no4 ','$roll1','$roll2','$roll3','$roll4',' $paid ',' $room ',' $alloca ',' $type ',' $extra ',' $extra ',' $extra ')";
 
 if ($conn->query($sql) === TRUE) 
 {
@@ -98,21 +98,21 @@ $conn->close();
 </head>
 
 <body style="font-family: 'Cabin', sans-serif;">
-    <nav class="navbar navbar-light navbar-expand-md">
-    <div class="container-fluid"><a href="#" class="navbar-brand">Technotsav</a><button data-toggle="collapse" data-target="#navcol-1" class="navbar-toggler"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+  <nav class="navbar navbar-light navbar-expand-md">
+    <div class="container-fluid"><a href="#" class="navbar-brand">Technotsav</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-2"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span><span class="navbar-toggler-icon"></span><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse"
-            id="navcol-1">
+            id="navcol-2">
             <ul class="nav navbar-nav ml-auto">
-                <li role="presentation" class="nav-item"><a href="#" class="nav-link text-monospace" style="background-color:rgb(255,255,255);">
-                    <button class="btn btn-secondary" type="button" href="allResult.php">Show All</button>
-                    <button class="btn btn-secondary" type="button" href="verify.php" style="background-color:rgb(0,0,0);color:rgba(255,255,255,0.87);">Verify</button>
-                    <button class="btn btn-secondary" href="edit.php" type="button">Edit</button>
-                    <button class="btn btn-secondary" href="show.php" type="button" style="color:rgba(255,255,255,0.87);background-color:rgb(0,0,0);">Check One</button></a></li>
+                <li role="presentation" class="nav-item"><a href="allResult.php" class="nav-link active">Show all</a></li>
+                <li role="presentation" class="nav-item"><a href="verify.php" class="nav-link">Verify no</a></li>
+                <li class="nav-item" role="presentation"><a href="edit.php" class="nav-link">edit</a></li>
+                <li role="presentation" class="nav-item"><a href="show.php" class="nav-link">Check One</a></li>
                 <li role="presentation" class="nav-item"><a href="welcome.php" class="nav-link">Add One</a></li>
             </ul>
         </div>
     </div>
 </nav>
+
     <div>
         
         <div class="container card form" style="align-text:center" id="success" >
