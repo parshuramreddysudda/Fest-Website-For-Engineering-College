@@ -100,7 +100,9 @@ span.psw {
                 <li role="presentation" class="nav-item"><a href="verify.php" class="nav-link">Verify no</a></li>
                 <li class="nav-item" role="presentation"><a href="edit.php" class="nav-link">edit</a></li>
                 <li role="presentation" class="nav-item"><a href="show.php" class="nav-link">Check One</a></li>
-                <li role="presentation" class="nav-item"><a href="welcome.php" class="nav-link">Add One</a></li>
+                <li role="presentation" class="nav-item"><a href="welcome.php" class="nav-link">Add One</a></li> 
+                <li role="presentation" class="nav-item">
+<a href="export.php?export=true"  class="nav-link">Export</a></li>
             </ul>
         </div>
     </div>
